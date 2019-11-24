@@ -24,19 +24,23 @@
         <child id="7486903154347178702" name="formalParameterList" index="1uUwe" />
         <child id="7486903154347178686" name="body" index="1uUxY" />
       </concept>
-      <concept id="5059844704661651979" name="CsBaseLanguage.structure.DocumentationComment" flags="ng" index="pLYZS">
-        <property id="5059844704661651980" name="value" index="pLYZZ" />
-      </concept>
       <concept id="5059844704660991035" name="CsBaseLanguage.structure.SingleLineComment" flags="ng" index="pNo78">
         <property id="5059844704661223944" name="value" index="pKhvV" />
       </concept>
+      <concept id="5059844704660991036" name="CsBaseLanguage.structure.MultiLineComment" flags="ng" index="pNo7f">
+        <child id="5059844704662416141" name="commentLine" index="AcOrY" />
+      </concept>
       <concept id="3766354144460199615" name="CsBaseLanguage.structure.Private" flags="ng" index="2qAx6s" />
       <concept id="3766354144460199614" name="CsBaseLanguage.structure.Public" flags="ng" index="2qAx6t" />
+      <concept id="3766354144460199616" name="CsBaseLanguage.structure.Internal" flags="ng" index="2qAx7z" />
       <concept id="3766354144460261375" name="CsBaseLanguage.structure.Static" flags="ng" index="2qAK3s" />
       <concept id="3766354144459872182" name="CsBaseLanguage.structure.IFunctionHeader" flags="ng" index="2qBh2l">
         <child id="7575174424947156020" name="formalParameterList" index="1fIg$P" />
       </concept>
       <concept id="7769220957754731518" name="CsBaseLanguage.structure.VariableDeclaration" flags="ng" index="zF7EM" />
+      <concept id="5059844704662416138" name="CsBaseLanguage.structure.MultiLineCommentLine" flags="ng" index="AcOrT">
+        <property id="5059844704662416139" name="value" index="AcOrS" />
+      </concept>
       <concept id="2439281069887047993" name="CsBaseLanguage.structure.NotGenericParameterTypeReference" flags="ng" index="2Gatwc">
         <reference id="2439281069887050838" name="referencedType" index="2Gaslz" />
       </concept>
@@ -163,11 +167,13 @@
       <concept id="6843536562190670248" name="CsBaseLanguage.structure.GreaterThanOrEqualToExpression" flags="ng" index="3UffAm" />
       <concept id="6843536562190757247" name="CsBaseLanguage.structure.Type" flags="ng" index="3UfwP1">
         <child id="6843536562190767680" name="nonArrayType" index="3UfBpY" />
+        <child id="6843536562190767745" name="rankSpecifier" index="3UfBqZ" />
       </concept>
       <concept id="6843536562190757244" name="CsBaseLanguage.structure.UnaryTypedExpression" flags="ng" index="3UfwP2">
         <child id="6843536562190757245" name="type" index="3UfwP3" />
         <child id="6843536562190757250" name="expression" index="3UfwQW" />
       </concept>
+      <concept id="6843536562190767682" name="CsBaseLanguage.structure.RankSpecifier" flags="ng" index="3UfBpW" />
       <concept id="6843536562190694844" name="CsBaseLanguage.structure.BoolType" flags="ng" index="3UfLA2" />
       <concept id="6843536562190680508" name="CsBaseLanguage.structure.CharType" flags="ng" index="3UfM62" />
       <concept id="6843536562190680504" name="CsBaseLanguage.structure.IntType" flags="ng" index="3UfM66" />
@@ -190,7 +196,7 @@
   <node concept="31LFg6" id="197EpWwDxe2">
     <property role="TrG5h" value="WordCount.cs" />
     <node concept="31LijL" id="32KJvxjS8VP" role="31LlDr">
-      <property role="TrG5h" value="WordCount" />
+      <property role="TrG5h" value="WordCounting" />
       <node concept="pNo78" id="32KJvxjXiK2" role="31LkaE">
         <property role="pKhvV" value="https://github.com/JakubSaksa/csharp/blob/master/wordCount/wordCount/Program.cs" />
       </node>
@@ -234,7 +240,13 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="3UdiBG" id="32KJvxjU_XF" role="3UdfaP" />
+                  <node concept="3UdiBG" id="32KJvxjU_XF" role="3UdfaP">
+                    <node concept="3UdiBH" id="1y6skteFk1x" role="3UdiBE">
+                      <node concept="3UcWq5" id="1y6skteFk1_" role="3UdiBb">
+                        <ref role="zF7P4" node="32KJvxjU_Xb" resolve="file" />
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
@@ -249,8 +261,13 @@
           </node>
           <node concept="2qAx6t" id="32KJvxjU_X8" role="3SE3Wx" />
         </node>
-        <node concept="pLYZS" id="32KJvxjUA7x" role="31Leeq">
-          <property role="pLYZZ" value="returns one word (as defined in the assignment), if there are multiple whitespaces in the row, returns empty string" />
+        <node concept="pNo7f" id="1y6skteFkpy" role="31Leeq">
+          <node concept="AcOrT" id="1y6skteFkpz" role="AcOrY">
+            <property role="AcOrS" value="&#9;returns one word (as defined in the assignment)," />
+          </node>
+          <node concept="AcOrT" id="1y6skteFkrM" role="AcOrY">
+            <property role="AcOrS" value="&#9;if there are multiple whitespaces in the row, returns empty string" />
+          </node>
         </node>
         <node concept="31KRCM" id="32KJvxjUA0A" role="31Leeq">
           <property role="TrG5h" value="GetWord" />
@@ -430,6 +447,7 @@
           <node concept="3UfwP1" id="32KJvxjUA1b" role="3Sw9wT">
             <node concept="3UfNVn" id="32KJvxjUA_3" role="3UfBpY" />
           </node>
+          <node concept="2qAx7z" id="1y6skteFk1u" role="3SE3Wx" />
         </node>
         <node concept="31KRCM" id="32KJvxjUAyV" role="31Leeq">
           <property role="TrG5h" value="Done" />
@@ -507,7 +525,7 @@
             <node concept="2Gatwc" id="32KJvxjX9OU" role="3UfBpY">
               <ref role="2Gaslz" node="32KJvxjS8VU" resolve="Reader" />
               <node concept="2Gatwc" id="32KJvxjX9OW" role="2GaslH">
-                <ref role="2Gaslz" node="32KJvxjS8VP" resolve="WordCount" />
+                <ref role="2Gaslz" node="32KJvxjS8VP" resolve="WordCounting" />
               </node>
             </node>
           </node>
@@ -537,7 +555,7 @@
                     <node concept="2Gatwc" id="32KJvxjX9R7" role="3UfBpY">
                       <ref role="2Gaslz" node="32KJvxjS8VU" resolve="Reader" />
                       <node concept="2Gatwc" id="32KJvxjX9R9" role="2GaslH">
-                        <ref role="2Gaslz" node="32KJvxjS8VP" resolve="WordCount" />
+                        <ref role="2Gaslz" node="32KJvxjS8VP" resolve="WordCounting" />
                       </node>
                     </node>
                   </node>
@@ -684,17 +702,29 @@
                 <node concept="3UcVBg" id="32KJvxjXij6" role="3Ufby4">
                   <property role="1pzoAX" value="1" />
                 </node>
-                <node concept="3UcWq5" id="32KJvxjXiiv" role="3Ufby2">
-                  <ref role="zF7P4" node="32KJvxjXigJ" resolve="args" />
+                <node concept="3Uc_2w" id="1y6skteFk0V" role="3Ufby2">
+                  <node concept="3UcWq5" id="1y6skteFk14" role="3Uc_2x">
+                    <ref role="zF7P4" node="32KJvxjXigJ" resolve="args" />
+                  </node>
+                  <node concept="1VUwCF" id="1y6skteFk1k" role="3Uc_2v">
+                    <ref role="2aT8gA" to="fj55:69WQsxLbYO" resolve="Length" />
+                  </node>
                 </node>
               </node>
             </node>
+            <node concept="31KRCQ" id="1y6skteFjZs" role="1ux1N" />
             <node concept="2YtDL$" id="32KJvxjXilf" role="1ux1N">
               <node concept="1ux1M" id="32KJvxjXilh" role="2YtDL_">
+                <node concept="pNo78" id="1y6skteFkx0" role="1ux1N">
+                  <property role="pKhvV" value="Add array access" />
+                </node>
                 <node concept="2YDbI9" id="32KJvxjXimt" role="1ux1N">
                   <node concept="3UfwP1" id="32KJvxjXimv" role="2YDbI6">
-                    <node concept="2Gatwc" id="32KJvxjXimB" role="3UfBpY">
-                      <ref role="2Gaslz" node="32KJvxjS8VP" resolve="WordCount" />
+                    <node concept="2Gatwc" id="1y6skteFjZa" role="3UfBpY">
+                      <ref role="2Gaslz" node="32KJvxjX9Ma" resolve="WordCount" />
+                      <node concept="2Gatwc" id="1y6skteFjZc" role="2GaslH">
+                        <ref role="2Gaslz" node="32KJvxjS8VP" resolve="WordCounting" />
+                      </node>
                     </node>
                   </node>
                   <node concept="2YC0sE" id="32KJvxjXimE" role="2YDbI4">
@@ -703,8 +733,11 @@
                     </node>
                     <node concept="3UdfaV" id="32KJvxjXimM" role="2YCihz">
                       <node concept="3UfwP1" id="32KJvxjXimO" role="3UdfaS">
-                        <node concept="2Gatwc" id="32KJvxjXimX" role="3UfBpY">
-                          <ref role="2Gaslz" node="32KJvxjS8VP" resolve="WordCount" />
+                        <node concept="2Gatwc" id="1y6skteFjZf" role="3UfBpY">
+                          <ref role="2Gaslz" node="32KJvxjX9Ma" resolve="WordCount" />
+                          <node concept="2Gatwc" id="1y6skteFjZh" role="2GaslH">
+                            <ref role="2Gaslz" node="32KJvxjS8VP" resolve="WordCounting" />
+                          </node>
                         </node>
                       </node>
                       <node concept="3UdiBG" id="32KJvxjXimR" role="3UdfaP">
@@ -831,8 +864,9 @@
           <node concept="1ux1I" id="32KJvxjXa4Z" role="1fIg$P">
             <node concept="31KZC3" id="32KJvxjXigJ" role="1ux1J">
               <property role="TrG5h" value="args" />
-              <node concept="3UfwP1" id="32KJvxjXigK" role="2UegB9">
+              <node concept="3UfwP1" id="1y6skteFjZl" role="2UegB9">
                 <node concept="3UfNVn" id="32KJvxjXih1" role="3UfBpY" />
+                <node concept="3UfBpW" id="1y6skteFjZm" role="3UfBqZ" />
               </node>
             </node>
           </node>

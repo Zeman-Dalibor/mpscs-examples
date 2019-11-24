@@ -598,11 +598,8 @@
             </node>
           </node>
           <node concept="3UfwP1" id="1BUNrxnMSj" role="3Sw9wT">
-            <node concept="2Gatwc" id="1BUNrxnMSo" role="3UfBpY">
+            <node concept="2Gatwc" id="1y6skteFjYf" role="3UfBpY">
               <ref role="2Gaslz" to="fj55:69WQsxL79l" resolve="void" />
-              <node concept="2Gatwc" id="3NStqpRnAnq" role="2GaslH">
-                <ref role="2Gaslz" to="fj55:69WQsxLgoI" resolve="System" />
-              </node>
             </node>
           </node>
           <node concept="2qAK3s" id="1BUNrxnMSv" role="3SE3Wx" />
