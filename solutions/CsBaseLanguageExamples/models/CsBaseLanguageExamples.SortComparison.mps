@@ -672,7 +672,7 @@
   <node concept="31LFg6" id="197EpWwDxbk">
     <property role="TrG5h" value="SortComparison.cs" />
     <node concept="31LiCz" id="2_XGSDwME1_" role="31LlDr">
-      <property role="TrG5h" value="Program" />
+      <property role="TrG5h" value="SortComparison" />
       <node concept="31KRCM" id="2_XGSDwME1E" role="31Leeq">
         <property role="TrG5h" value="Main" />
         <node concept="1ux1M" id="2_XGSDwME1F" role="31KRCR">

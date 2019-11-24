@@ -74,7 +74,7 @@
     </language>
   </registry>
   <node concept="31LFg6" id="197EpWwDxdG">
-    <property role="TrG5h" value="HelloWorld.cs" />
+    <property role="TrG5h" value="Program.cs" />
     <node concept="31LijL" id="3_0V6TwJPM$" role="31LlDr">
       <property role="TrG5h" value="HelloWorldCommon" />
       <node concept="31LiCz" id="3_0V6TwJPMB" role="31LkaE">
