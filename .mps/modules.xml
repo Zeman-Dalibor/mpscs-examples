@@ -2,9 +2,9 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/solutions/CsBaseLanguageExamples/CsBaseLanguageExamples.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/CalculatorDSL/CalculatorDSL.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/CalculatorDSL/sandbox/CalculatorDSL.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/CsBaseLanguageExamples/CsBaseLanguageExamples.msd" folder="" />
     </projectModules>
   </component>
 </project>
